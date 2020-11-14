@@ -106,7 +106,7 @@ window.addEventListener('DOMContentLoaded', (wde) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'bearer 85e3ccfa7776bdf46cc57db1cb618bed2da4f2a1',
+            'Authorization': 'bearer ddae4abb08c25285921356e70a3e7fa998fd6855',
         },
         body: JSON.stringify(gq),
     })
