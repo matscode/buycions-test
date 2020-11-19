@@ -429,6 +429,24 @@ ul.list-inline li {
     justify-content: space-between;
 }
 
+.nmx-16 {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.jws-menu {
+    white-space: nowrap;
+}
+
+.jws-menu ul.jws-menu {
+    width: 100%;
+}
+
+.mobile-profile-tab {
+    overflow: auto;
+    width: 100%;
+}
+
 @media (max-width: 767.98px) {
 
     .repo-user-wrapper {
@@ -447,9 +465,28 @@ ul.list-inline li {
         margin-right: 20px;
     }
 
+    .mobile-profile-tab .octicon {
+        display: none;
+    }
+
     .repo-user-profile img.avatar {
         position: static;
         width: 120px;
+    }
+
+    #repositoriesWrapper .repository .part-1 .additional-infos {
+        white-space: unset;
+    }
+
+    .personal-navbar {
+        display: none;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .mobile-only-d {
+        display: none;
     }
 }
 
@@ -469,10 +506,6 @@ ul.list-inline li {
         /*justify-content: space-around;*/
     }
 
-    .personal-navbar {
-        display: none;
-    }
-
     .repo-user-wrapper {
         max-width: 100%;
         margin-top: 10px;
@@ -488,4 +521,5 @@ ul.list-inline li {
     .mobile-menu {
         display: none;
     }
+
 }

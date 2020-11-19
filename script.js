@@ -69,6 +69,7 @@ window.addEventListener('DOMContentLoaded', (wde) => {
     const profileUsername = document.querySelector('.profile-username');
     const profileDesc = document.querySelector('.profile-description');
     const repoCount = document.querySelector('#repositoriesCount');
+    const repoCountMobile = document.querySelector('#repositoriesCountMobile');
     const profilePicture = document.getElementsByClassName('avatar');
 
     const gq = {
@@ -117,6 +118,7 @@ window.addEventListener('DOMContentLoaded', (wde) => {
             profileName.innerHTML = user.name;
             profileUsername.innerHTML = user.login;
             repoCount.innerHTML = user.repositories.totalCount;
+            repoCountMobile.innerHTML = user.repositories.totalCount;
             profileDesc.innerHTML = user.bioHTML;
             for (let xy = 0; xy < profilePicture.length; xy++) {
                 profilePicture[xy].src = user.avatarUrl;
