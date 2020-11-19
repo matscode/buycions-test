@@ -194,6 +194,10 @@ ul.list-inline li {
     margin-top: 18px;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .just-weird-section {
     display: flex;
 }
@@ -290,6 +294,12 @@ ul.list-inline li {
     position: relative;
 }
 
+.repo-user-wrapper {
+    min-width: 280px;
+    /*Not something define... just random to force wrap :-D*/
+    max-width: 300px;
+}
+
 .repo-user-profile {
     height: 240px;
 }
@@ -299,6 +309,12 @@ ul.list-inline li {
     top: -30px;
     border: 1px solid #ececec;
     background-color: #fff;
+    width: 260px;
+}
+
+.repo-user-info {
+    /*Add this to prevent responsiveness glitch*/
+    min-width: 200px;
 }
 
 .profile-user-name {
@@ -366,6 +382,7 @@ ul.list-inline li {
 #repositoriesWrapper .repository .part-1 .additional-infos {
     font-size: 13px;
     margin-top: 25px;
+    white-space: nowrap;
 }
 
 #repositoriesWrapper .repository .part-1 .additional-infos {
@@ -406,9 +423,69 @@ ul.list-inline li {
     text-decoration: none;
     transition: .2s cubic-bezier(.3, 0, .5, 1);
     transition-duration: 0.2s;
-
 }
 
 .justify-content-btwn {
     justify-content: space-between;
+}
+
+@media (max-width: 767.98px) {
+
+    .repo-user-wrapper {
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .user-profile-mobile-only-flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .repo-user-profile {
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .repo-user-profile img.avatar {
+        position: static;
+        width: 120px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .primary-nav .search-input,
+    .primary-nav .nav-menu,
+    .primary-nav .right-nav-menu .nav-menu-item:nth-child(n + 2) {
+        display: none;
+    }
+
+    .app-brand {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .justify-md-content-cntr {
+        /*justify-content: space-around;*/
+    }
+
+    .personal-navbar {
+        display: none;
+    }
+
+    .repo-user-wrapper {
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .main-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .mobile-menu {
+        display: none;
+    }
 }
