@@ -314,7 +314,7 @@ ul.list-inline li {
 
 .repo-user-info {
     /*Add this to prevent responsiveness glitch*/
-    min-width: 200px;
+    min-width: 150px;
 }
 
 .profile-user-name {
@@ -438,12 +438,17 @@ ul.list-inline li {
     white-space: nowrap;
 }
 
-.jws-menu ul.jws-menu {
-    width: 100%;
+ul.jws-menu {
+    padding-left: 10px;
+}
+
+.mobile-profile-tab-wrapper {
+    overflow: auto;
+    width: 100vw;
+    background-color: #fff;
 }
 
 .mobile-profile-tab {
-    overflow: auto;
     width: 100%;
 }
 
@@ -465,10 +470,6 @@ ul.list-inline li {
         margin-right: 20px;
     }
 
-    .mobile-profile-tab .octicon {
-        display: none;
-    }
-
     .repo-user-profile img.avatar {
         position: static;
         width: 120px;
@@ -480,6 +481,20 @@ ul.list-inline li {
 
     .personal-navbar {
         display: none;
+    }
+
+    .mobile-profile-tab-wrapper {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    #repositoriesWrapper .repository .part-1 {
+        max-width: 65%;
+    }
+
+    #repositoriesWrapper .repository .part-2 {
+        max-width: 35%;
     }
 
 }
@@ -522,4 +537,22 @@ ul.list-inline li {
         display: none;
     }
 
+}
+
+@media (max-width: 575.98px) {
+    .mobile-profile-tab .octicon {
+        display: none;
+    }
+
+    .repo-user-profile img.avatar {
+        position: static;
+        width: 80px;
+    }
+}
+
+@media (max-width: 319.98px) {
+    .repo-user-profile img.avatar {
+        position: static;
+        width: 50px;
+    }
 }
